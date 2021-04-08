@@ -94,6 +94,12 @@ public class EmailTest {
 	public void testCreateMimeMessage() {
 		email.createMimeMessage(null);
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSendMimeMessage() throws EmailException {
+		email.sendMimeMessage();
+	}
+	
 
 	
 
