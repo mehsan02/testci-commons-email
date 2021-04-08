@@ -38,5 +38,21 @@ public class EmailTest {
 		email.setHostName(null);
 		assertEquals(null, email.getHostName());
 	}
+	
+	@Test
+	public void testGetHostNameWithSession() {
+
+		Properties properties = new Properties();
+		Session session = Session.getDefaultInstance(properties, null);
+		properties.put(EmailConstants.MAIL_HOST, "me@gmail.com");
+		email.setMailSession(session);
+		assertEquals("me@gmail.com", email.getHostName());
+	}
+	
+	@After
+	public void tearDownEmailTest() throws Exception{
+		
+	}
+
 }
 	
