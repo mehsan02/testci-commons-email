@@ -53,6 +53,14 @@ public class EmailTest {
 	public void tearDownEmailTest() throws Exception{
 		
 	}
+	
+	@Test
+	public void testAddBcc() throws Exception{
+		email.addBcc(TEST_EMAILS);
+		int num = 3; 
+		assertEquals(num, email.getBccAddresses().size());
+	}
+	
 
 }
 	
