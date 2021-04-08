@@ -90,6 +90,12 @@ public class EmailTest {
 		email.addReplyTo(emailName, personName);
 	}
 	
+	@Test
+	public void testCreateMimeMessage() {
+		email.createMimeMessage(null);
+	}
+
+	
 
 }
 	
