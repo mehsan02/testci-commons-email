@@ -106,6 +106,25 @@ public class EmailTest {
 		email.getMailSession();
 	}
 	
+	@Test 
+	public void testbuildMimeMessage() throws EmailException {
+				
+		email.setHostName("localHost"); 
+		email.setSmtpPort(4532);
+		email.setFrom("me@gmail.com");
+		email.addTo("me2@gmail.com");
+		email.setSubject("Hi There");
+		
+		email.setCharset("ISO-8859-1");
+		email.setContent("test content", "text/plain");
+		email.addCc("test@abc.com");
+		email.addBcc("test2@abc.com");
+		email.addHeader("test", "abc");
+		email.updateContentType(null);
+						
+		email.buildMimeMessage();
+	}
+
 	
 
 }
