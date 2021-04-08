@@ -33,5 +33,10 @@ public class EmailTest {
 	}
 	
 
+	@Test
+	public void testGetSetHostNameWithNull() {
+		email.setHostName(null);
+		assertEquals(null, email.getHostName());
+	}
 }
 	
