@@ -75,6 +75,14 @@ public class EmailTest {
 		email.addHeader(null, strValue);
 		
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testAddHeaderWithValueNull(){
+		String strName = "Hi";
+		email.addHeader(strName, null);
+				
+	}
+
 
 }
 	
