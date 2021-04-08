@@ -100,7 +100,12 @@ public class EmailTest {
 		email.sendMimeMessage();
 	}
 	
-
+	@Test (expected = EmailException.class)
+	public void testGetMailSession() throws EmailException {	
+		email.setBounceAddress("me2@gmail.com");
+		email.getMailSession();
+	}
+	
 	
 
 }
