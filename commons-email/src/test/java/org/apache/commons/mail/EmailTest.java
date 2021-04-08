@@ -26,6 +26,12 @@ public class EmailTest {
 		email = new EmailConcrete();
 	}
 	
+	@Test
+	public void testgetHostName() {
+		email.setHostName("192.345.3.2");
+		assertEquals("192.345.3.2", email.getHostName());
+	}
+	
 
 }
 	
