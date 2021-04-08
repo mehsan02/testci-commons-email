@@ -83,6 +83,13 @@ public class EmailTest {
 				
 	}
 
+	@Test
+	public void testAddReplyTo() throws EmailException {
+		String emailName = "me@gmail.com";
+		String personName = "ME";
+		email.addReplyTo(emailName, personName);
+	}
+	
 
 }
 	
