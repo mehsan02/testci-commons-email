@@ -125,6 +125,12 @@ public class EmailTest {
 		email.buildMimeMessage();
 	}
 
+	@Test
+	public void testGetSentDate() {
+		Date date = new Date(2021-03-21);
+		email.setSentDate(date);	
+		assertEquals(date, email.getSentDate());
+	}
 	
 
 }
