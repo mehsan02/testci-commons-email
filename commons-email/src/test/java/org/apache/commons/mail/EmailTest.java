@@ -69,6 +69,12 @@ public class EmailTest {
 		assertEquals(num, email.getCcAddresses().size());
 	}
 	
+	@Test (expected = IllegalArgumentException.class)
+	public void testAddHeaderWithNameNull() {
+		String strValue = "0";
+		email.addHeader(null, strValue);
+		
+	}
 
 }
 	
