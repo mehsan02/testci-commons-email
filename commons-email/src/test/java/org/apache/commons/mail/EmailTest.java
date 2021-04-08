@@ -132,6 +132,12 @@ public class EmailTest {
 		assertEquals(date, email.getSentDate());
 	}
 	
+	@Test
+	public void testGetSocketConnectionTimeout() {
+		email.setSocketConnectionTimeout(1);
+		assertEquals(1, email.getSocketConnectionTimeout());
+	}
+	
 
 }
 	
